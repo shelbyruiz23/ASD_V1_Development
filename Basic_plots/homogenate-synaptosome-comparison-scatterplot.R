@@ -182,10 +182,10 @@ ggplot(df, aes(x=HOM.Estimate,y=SYN.Estimate,fill=q.overlap))+
 
 #correlation
 res2=cor.test(df$HOM.Estimate, df$SYN.Estimate,
-              method="spearman")
+              method="pearson")
 
-print(res2$estimate) #0.324
-print(res2$p.value) #6.77x10-95
+print(res2$estimate) #0.321
+print(res2$p.value) # 4.43e-93
 
 ############################################################################
 
