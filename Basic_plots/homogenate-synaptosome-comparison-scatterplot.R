@@ -81,10 +81,10 @@ ggplot(df, aes(x=HOM.Estimate,y=SYN.Estimate,fill=q.overlap))+
 
 
 res=cor.test(df$HOM.Estimate, df$SYN.Estimate,
-             method="spearman")
+             method="pearson")
 
-print(res$estimate) #0.2730203 
-print(res$p.value) #8.128653e-67
+print(res$estimate) #0.2928426 
+print(res$p.value) #4.844326e-77
 ############################################################################
 
 ######################################
@@ -133,9 +133,9 @@ ggplot(df, aes(x=HOM.Estimate,y=SYN.Estimate,fill=q.overlap))+
 
 #correlation
 res2=cor.test(df$HOM.Estimate, df$SYN.Estimate,
-              method="spearman")
+              method="pearson")
 
-print(res2$estimate) #0.6597851 
+print(res2$estimate) #0.7264019  
 print(res2$p.value) #0
 
 ############################################################################
@@ -241,9 +241,9 @@ ggplot(df, aes(x=b.ctl_Hom,y=b.ctl_Syn,fill=q.overlap))+
 
 #correlation
 res2=cor.test(df$b.ctl_Hom, df$b.ctl_Syn,
-              method="spearman")
+              method="pearson")
 
-print(res2$estimate) #0.631
+print(res2$estimate) #0.7011107
 print(res2$p.value) #0
 
 
@@ -261,7 +261,7 @@ ggplot(df, aes(x=b.asd_Hom,y=b.asd_Syn,fill=q.overlap))+
 
 
 res2=cor.test(df$b.asd_Hom, df$b.asd_Syn,
-              method="spearman")
+              method="pearson")
 
-print(res2$estimate) #0.570
+print(res2$estimate) #0.6221676 
 print(res2$p.value) #0
